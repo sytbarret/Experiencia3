@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Rutas Disponibles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content >
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"
+      *ngFor="let ruta of rutas">
+      <ion-card>
+        <img src="assets/portada_rutas.png">
+              <h1>Datos del Conductor</h1>
+              <ion-card-subtitle>Nombre del conductor: {{ruta.conductor.nombre}}</ion-card-subtitle>
+              <ion-card-subtitle>Patente: {{ruta.conductor.patente}}</ion-card-subtitle>
+              <h1>Rutas</h1>
+              <ion-card-subtitle>{{ruta.rutas.avenida1}}</ion-card-subtitle>
+              <ion-card-subtitle>{{ruta.rutas.avenida2}}</ion-card-subtitle>
+              <ion-card-subtitle>{{ruta.rutas.avenida3}}</ion-card-subtitle>
+              <ion-card-subtitle>{{ruta.avenidaOpcional1}}</ion-card-subtitle>
+              <ion-card-subtitle>{{ruta.avenidaOpcional1}}</ion-card-subtitle>
+            <br>
+            <center><ion-button>Solicitar</ion-button></center>
+          </ion-card>
+        </ion-col>
+        </ion-row>
+        </ion-grid>
+</ion-content>

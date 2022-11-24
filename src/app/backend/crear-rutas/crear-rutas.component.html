@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Arma tu ruta
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card>
+  
+  <ion-item >
+    <ion-label>Nombre : </ion-label>
+    <ion-input [(ngModel)]="data.conductor.nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Patente del Vehiculo : </ion-label>
+    <ion-input [(ngModel)]="data.conductor.patente" placeholder="ERFR23"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Avenida 1 : </ion-label>
+    <ion-input [(ngModel)]="data.rutas.avenida1"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Avenida 2 : </ion-label>
+    <ion-input [(ngModel)]="data.rutas.avenida2"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Avenida 3 : </ion-label>
+    <ion-input [(ngModel)]="data.rutas.avenida3"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Avenida 4 : </ion-label>
+    <ion-input [(ngModel)]="data.avenidaOpcional1" placeholder="Opcional"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Avenida 5 : </ion-label>
+    <ion-input [(ngModel)]="data.avenidaOpcional2" placeholder="Opcional"></ion-input>
+  </ion-item>
+
+</ion-card>
+
+<center><ion-button (click)="crearRuta('middle')">
+  Crear Ruta
+</ion-button></center>
+
+
+</ion-content>
